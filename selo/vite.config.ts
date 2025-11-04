@@ -1,5 +1,5 @@
 // vite.config.ts
-import { defineConfig } from 'vitest/config'
+import { defineConfig } from 'vitest/config.js'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite' 
 
