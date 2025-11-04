@@ -1,0 +1,11 @@
+/* src/index.css */
+@import "tailwindcss";
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.hero-bg {
+    background-color: #F0F4F8;
+    background-image: linear-gradient(135deg, #F0F4F8 0%, #D9E2EC 100%);
+}
