@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FileText, PlusCircle, CheckCircle, Edit, Award } from 'lucide-react';
+import { FileText, PlusCircle, CheckCircle, Edit, Building } from 'lucide-react';
 import type { Badge } from './BadgesPage'; // Reutilizando a interface
 import badgeIcon from '/badge.jpg'; // Reutilizando o ícone mockado
 
@@ -143,6 +143,30 @@ export function IndustryDashboardPage() {
             ))}
           </div>
         </section>
+
+{/* 3. Minhas Empresas */}
+        <section className="mt-12">
+          <h3 className="text-2xl font-semibold text-gray-800 mb-4">Empresas Cadastradas</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 flex flex-col">
+                <div className="flex items-center mb-4">
+                  <div className="bg-indigo-100 text-indigo-700 p-3 rounded-full mr-4">
+                    <Building size={24} />
+                  </div>
+                  <h4 className="text-xl font-bold text-gray-800">Minhas Empresas</h4>
+                </div>
+                <p className="text-gray-600 mb-4 flex-grow">Visualize e gerencie as empresas cadastradas no sistema.</p>
+                <Link
+                  to="/industry/dashboard/empresas"
+                  className="w-full text-center bg-blue-700 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-800 transition-colors flex items-center justify-center mt-auto"
+                >
+                  <Edit size={20} className="mr-2" />
+                  Gerenciar Empresas
+                </Link>
+              </div>
+          </div>
+        </section>
+        
       </main>
     </div>
   );

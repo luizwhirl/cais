@@ -1,7 +1,7 @@
 // selo-fiea-frontend/src/components/AuthForm.test.tsx
 
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { AuthForm } from './AuthForm';
+import { AuthForm } from '../components/AuthForm';
 
 // --- 1. MOCKANDO O REACT-ROUTER-DOM ---
 const mockNavigate = vi.fn(); 
