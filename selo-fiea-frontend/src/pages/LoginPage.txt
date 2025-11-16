@@ -1,0 +1,76 @@
+// Essa não é a página de logins real
+// SOmente um teste de notificações 
+
+import React from 'react';
+import { useNotifications } from '../hooks/useNotifications';
+
+export const LoginPage = () => {
+  const { addNotification } = useNotifications();
+
+  return (
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: '100vh',
+      gap: '20px',
+      fontFamily: 'Arial, sans-serif',
+      backgroundColor: '#f4f4f4'
+    }}>
+      
+      <h1 style={{ color: '#333' }}>Página de Login (com Testes)</h1>
+      
+      <p style={{ color: '#555' }}>
+        Aperte os botões para ver as notificações em ação.
+      </p>
+
+      <div style={{ display: 'flex', gap: '15px' }}>
+        <button
+          onClick={() => addNotification('Isso é uma notificação de SUCESSO!', 'success')}
+          style={{
+            padding: '12px 20px',
+            fontSize: '16px',
+            backgroundColor: '#28a745',
+            color: 'white',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer'
+          }}
+        >
+          Testar Sucesso
+        </button>
+        
+        <button
+          onClick={() => addNotification('Isso é uma notificação de ERRO!', 'error')}
+          style={{
+            padding: '12px 20px',
+            fontSize: '16px',
+            backgroundColor: '#dc3545',
+            color: 'white',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer'
+          }}
+        >
+          Testar Erro
+        </button>
+        
+        <button
+          onClick={() => addNotification('Isso é uma notificação de INFORMAÇÃO!', 'info')}
+          style={{
+            padding: '12px 20px',
+            fontSize: '16px',
+            backgroundColor: '#17a2b8',
+            color: 'white',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer'
+          }}
+        >
+          Testar Info
+        </button>
+      </div>
+    </div>
+  );
+};
